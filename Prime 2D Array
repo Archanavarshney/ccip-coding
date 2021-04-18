@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int a[10][10],i,j,sum1=0,sum2=0,add,n,k;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+             scanf("%d",&a[i][j]);
+        }    
+    } 
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(i==j)
+            {
+                for(k=2;k<=n;k++)
+                {
+                    if(a[i][j]%k==0)
+                    {
+                        a[i][j]=0;
+                    }
+                }
+                sum1=sum1+a[i][j]; 
+            } 
+            if(i+j==n-1)
+            {
+                for(k=2;k<=n;k++)
+                {
+                    if(a[i][j]%k==0)
+                    {
+                        a[i][j]=0;
+                    }
+                }
+                sum2=sum2+a[i][j]; 
+            } 
+        }
+    }
+    add=abs(sum1+sum2);
+    printf("%d",add);
+    return 0;
+}
