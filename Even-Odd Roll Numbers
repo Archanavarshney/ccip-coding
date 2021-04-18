@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+      int a[20],i,n;
+    int even_sum=0,odd_sum=0;
+    float even_avg,odd_avg,diff;
+    int count1=0,count2=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        if(i%2==0)
+        {
+          even_sum+=a[i];
+          count1++;
+          even_avg=even_sum/count1;
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        if(i%2!=0)
+        {
+          odd_sum+=a[i];
+          count2++;
+          odd_avg=(float)odd_sum/count2;
+        }
+    }
+    diff=even_avg-odd_avg;
+    printf("%f",diff);
+    return 0;
+}
