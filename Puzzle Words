@@ -1,0 +1,53 @@
+It's a puzzle doesn't need explanation.
+
+Input Format
+
+string s
+
+Constraints
+
+Nothing
+
+Output Format
+
+In the form of String
+
+Sample Input 0
+
+hello@
+Sample Output 0
+
+HELLO@
+Sample Input 1
+
+@%@5@5@
+Sample Output 1
+
+@%@5@5@
+ 
+ 
+solution---
+ 
+ 
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+int main() {
+7
+​
+8
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+9
+    return 0;
+10
+}
+11
+​
