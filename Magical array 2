@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+      int arr[100],i,size,sum=0;
+    scanf("%d",&size);
+    for(i=0;i<size;i++)
+    {
+     scanf("%d",&arr[i]);
+    }
+        int temp=size-1;
+    for(i=0;i<size;i++)
+    {
+    if(arr[0] %2 ==0 && arr[temp] %2 == 0)
+        {
+         sum= sum + arr[i];
+        }
+    }
+
+    if(sum % 2!= 0)
+    printf("Yes");
+    else
+    printf("No");
+    return 0;
+}
